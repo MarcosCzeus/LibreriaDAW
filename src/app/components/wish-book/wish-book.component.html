@@ -1,0 +1,33 @@
+<div class="container">
+        
+    <div class="row">
+        <hr>
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="text-center">Lista de Deseos</h1>
+            <button type="button" class="btn btn-outline-success bt bi-bookmark-heart" [routerLink]="['/wishbookregister']"></button>
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th class="img">Imagen</th>
+                    <th>ID de el Libro</th>
+                    <th>Título</th>
+                    <th>Nombre del Autor</th>
+                    <th>Precio de el Libro</th>
+                    <th class="d-flex align-items-center">Categoría
+                        <select name="selecategoria" class="btn btn-outline-success btn-lg custom-btn" id="categoria" required>
+                            <option value=""  disabled selected></option>
+                            <option value="mcgraw">Literarios</option>
+                            <option value="pear">Didácticos</option>
+                            <option value="alfa">Científicos</option>
+                            <option value="anaya">Técnicos</option>
+                            <option value="and">Biográficos</option>
+                        </select>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="infolibro" >
+            </tbody>
+        </table>
+    </div>
+</div>

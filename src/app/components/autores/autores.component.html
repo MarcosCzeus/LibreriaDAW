@@ -1,0 +1,24 @@
+<div class="container">
+        
+    <div class="row">
+        <hr>
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="text-center">Lista de Autores</h1>
+            <button type="button" class="btn btn-outline-success bi bi-plus-circle" [routerLink]="['/autoresRegister']"></button>
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Codigo de Autor</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Nombre del Autor</th>
+                    <th>Apellido del Autor</th>
+                    <th>Nacio</th>
+                    <th>Murio</th>
+                </tr>
+            </thead>
+            <tbody id="infolibro" >
+            </tbody>
+        </table>
+    </div>
+</div>
