@@ -1,0 +1,46 @@
+// Estilos para el título
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #355975;
+    margin: 2rem 0;
+  }
+  
+  // Estilos para el formulario
+  #frmbook {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  // Estilos para los íconos en el formulario
+  .input-group-text {
+    background-color: #355975;
+    color: #93b5d5;
+    i {
+      font-size: 1.5rem;
+    }
+  }
+  
+  // Estilos para los campos de entrada
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  // Estilos para el botón "Enviar"
+  #mostrar {
+    background-color: #7c9ebd;
+    border: none;
+    width: 100%;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+  
+  // Estilos adicionales para el formulario
+  form {
+    background-color: #f8f9fa;
+    border: 1px solid #6487a5;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  

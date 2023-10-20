@@ -1,3 +1,25 @@
-.btn{
-    border-radius: 100%;
-}
+// Estilos para el título
+h1 {
+    font-size: 2.5rem;
+    color: #355975;
+    margin: 2rem 0;
+  }
+  
+  // Estilos para el botón "Agregar Autor"
+  .btn-success {
+    background-color: #7c9ebd;
+    border: none;
+    i {
+      font-size: 1.5rem;
+    }
+  }
+  
+  // Estilos adicionales para la tabla
+  table {
+    margin-top: 2rem;
+    th {
+      background-color: #4d708d;
+      color: #FFFFFF;
+    }
+  }
+  
