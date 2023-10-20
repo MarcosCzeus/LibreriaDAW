@@ -1,46 +1,57 @@
-// Estilos para el título
+// Definición de colores
+$color1: #44749d;
+$color2: #c6d4e1;
+$color3: #ffffff;
+$color4: #ebe7e0;
+$color5: #bdb8ad;
+
+// Estilos generales
+body {
+    font-family: Arial, sans-serif;
+    background-color: $color3;
+}
+
+.container {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: $color4;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
 h1 {
-    font-size: 2rem;
-    text-align: center;
-    color: #355975;
-    margin: 2rem 0;
-  }
-  
-  // Estilos para el formulario
-  #frmbook {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  // Estilos para los íconos en el formulario
-  .input-group-text {
-    background-color: #355975;
-    color: #93b5d5;
-    i {
-      font-size: 1.5rem;
-    }
-  }
-  
-  // Estilos para los campos de entrada
-  .input-group {
-    margin-bottom: 1rem;
-  }
-  
-  // Estilos para el botón "Enviar"
-  #mostrar {
-    background-color: #7c9ebd;
+    color: $color1;
+}
+
+.btn-primary {
+    background-color: $color1;
     border: none;
-    width: 100%;
-    font-size: 1.25rem;
-    margin-top: 1rem;
-  }
-  
-  // Estilos adicionales para el formulario
-  form {
-    background-color: #f8f9fa;
-    border: 1px solid #6487a5;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
+    &:hover {
+        background-color: darken($color1, 10%);
+    }
+}
+
+.form-control {
+    background-color: $color3;
+    border: 1px solid $color2;
+    color: $color1;
+    &:focus {
+        border-color: $color1;
+    }
+}
+
+.input-group-text {
+    background-color: $color1;
+    color: $color3;
+}
+
+.table {
+    background-color: $color3;
+    th {
+        background-color: $color1;
+        color: $color3;
+    }
+    tr:nth-child(odd) {
+        background-color: $color5;
+    }
+}

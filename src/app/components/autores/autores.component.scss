@@ -1,25 +1,43 @@
-// Estilos para el título
-h1 {
-    font-size: 2.5rem;
-    color: #355975;
-    margin: 2rem 0;
-  }
-  
-  // Estilos para el botón "Agregar Autor"
-  .btn-success {
-    background-color: #7c9ebd;
-    border: none;
-    i {
-      font-size: 1.5rem;
-    }
-  }
-  
-  // Estilos adicionales para la tabla
-  table {
+// Definición de colores
+$color1: #44749d;
+$color2: #c6d4e1;
+$color3: #ffffff;
+$color4: #ebe7e0;
+$color5: #bdb8ad;
+
+// Estilos generales
+body {
+    font-family: Arial, sans-serif;
+    background-color: $color3;
+}
+
+.container {
     margin-top: 2rem;
-    th {
-      background-color: #4d708d;
-      color: #FFFFFF;
+    padding: 2rem;
+    background-color: $color4;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: $color1;
+}
+
+.btn-primary {
+    background-color: $color1;
+    border: none;
+    &:hover {
+        background-color: darken($color1, 10%);
     }
-  }
-  
+}
+
+.table {
+    background-color: $color3;
+    th {
+        background-color: $color1;
+        color: $color3;
+    }
+    tr:nth-child(odd) {
+        background-color: $color5;
+    }
+}

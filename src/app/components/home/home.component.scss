@@ -1,16 +1,92 @@
-.img{
+// Definición de colores
+$color1: #44749d;
+$color2: #c6d4e1;
+$color3: #ffffff;
+$color4: #ebe7e0;
+$color5: #bdb8ad;
+
+// Estilos generales
+body {
+    font-family: Arial, sans-serif;
+    background-color: $color3;
+}
+
+.container {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: $color4;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: $color1;
+    font-size: 28px;
+    margin: 0;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    .input-group-prepend {
+        .input-group-text {
+            background-color: $color1;
+            border: none;
+            i {
+                font-size: 20px;
+                color: $color3;
+            }
+        }
+    }
+    input.form-control {
+        background-color: $color3;
+        border: 1px solid $color2;
+        color: $color1;
+        border-radius: 10px;
+        padding: 10px;
+        &:focus {
+            border-color: $color1;
+        }
+    }
+}
+
+select.form-control {
+    background-color: $color3;
+    border: 1px solid $color2;
+    color: $color1;
+    border-radius: 10px;
+    padding: 10px;
+    &:focus {
+        border-color: $color1;
+    }
+}
+
+.btn-success {
+    background-color: $color1;
+    border: none;
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 8px 12px;
+    i {
+        font-size: 18px;
+        color: $color3;
+    }
+    &:hover {
+        background-color: darken($color1, 10%);
+    }
+}
+
+.d-flex {
+    justify-content: center;
+}
+
+.img {
     width: 15px;
     height: 15px;
 }
 
-.custom-btn{
-    width: 150px;
-    height: 35px;
-    font-size: 14px;
-    padding: 8px 12px;
-}
 
-.circulo{
+.circulo {
     border-radius: 100%;
 }
-
