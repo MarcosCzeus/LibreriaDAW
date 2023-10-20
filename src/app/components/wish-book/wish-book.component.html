@@ -1,10 +1,9 @@
 <div class="container">
-        
     <div class="row">
         <hr>
         <div class="d-flex justify-content-between align-items-center">
             <h1 class="text-center">Lista de Deseos</h1>
-            <button type="button" class="btn btn-outline-success bt bi-bookmark-heart" [routerLink]="['/wishbookregister']"></button>
+            <i type="button" class="btn btn-outline-success bt bi-bookmark-heart" [routerLink]="['/wishbookregister']"></i>
         </div>
         <table class="table table-hover">
             <thead>
@@ -14,16 +13,14 @@
                     <th>Título</th>
                     <th>Nombre del Autor</th>
                     <th>Precio de el Libro</th>
-                    <th class="d-flex align-items-center">Categoría
-                        <select name="selecategoria" class="btn btn-outline-success btn-lg custom-btn" id="categoria" required>
-                            <option value=""  disabled selected></option>
-                            <option value="mcgraw">Literarios</option>
-                            <option value="pear">Didácticos</option>
-                            <option value="alfa">Científicos</option>
-                            <option value="anaya">Técnicos</option>
-                            <option value="and">Biográficos</option>
-                        </select>
-                    </th>
+                    <th><select name="selecategoria" class="btn btn-secondary btn-lg custom-btn" id="categoria" required>
+                        <option value="" disabled selected>Categoría</option>
+                        <option value="mcgraw">Literarios</option>
+                        <option value="pear">Didácticos</option>
+                        <option value="alfa">Científicos</option>
+                        <option value="anaya">Técnicos</option>
+                        <option value="and">Biográficos</option>
+                </select></th>
                 </tr>
             </thead>
             <tbody id="infolibro" >
