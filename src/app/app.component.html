@@ -1,14 +1,16 @@
-<div style="background-color: black;">
-<ul class="nav nav-tabs justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link btn-outline-light" aria-current="page" [routerLink]="['/home']">Catalogo de Libros</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link btn-outline-light" [routerLink]="['/autores']">Lista de Autores</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link btn-outline-light" [routerLink]="['/wishbook']">Lista de Deseos</a>
-  </li>
-</ul>
+<div class="main">
+  <div style="background-color: black;">
+  <ul class="nav nav-tabs justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link btn-outline-light" aria-current="page" [routerLink]="['/home']">Catalogo de Libros</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link btn-outline-light" [routerLink]="['/autores']">Lista de Autores</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link btn-outline-light" [routerLink]="['/wishbook']">Lista de Deseos</a>
+    </li>
+  </ul>
+  </div>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>
