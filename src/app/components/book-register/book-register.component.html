@@ -1,4 +1,4 @@
-<form [formGroup]="forms" action="#" method="post" id="Diseño">
+<form [formGroup]="forms" action="#" id="Diseño">
 <div class="row">
     <div>
         <h1 class="text-center">Información del libro</h1>
@@ -46,7 +46,7 @@
                 <input type="text" step="0.01" inputmode="decimal" placeholder="Ingrese el Precio" name="txtprecio" class="form-control" id="precio" required maxlength="6" required minlength="1" formControlName="Precio"/>
             </div>
             <div class="input-group mb-4">
-                <input  onchange="previewImage(event, '#image')" name="file" type="file" id="file"> 
+                <input  onchange="previewImage(event, '#image')" name="file" type="file" id="file">
                 <br>
             </div>
             <div class="d-flex justify-content-center">

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "libreria-979b5": {
+      "hosting": {
+        "App_libros": [
+          "libreria-979b5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "libreria-979b5"
+  }
+}

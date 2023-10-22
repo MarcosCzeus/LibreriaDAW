@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "App_libros:build:production",
+            "firebaseProject": "libreria-979b5",
+            "firebaseHostingSite": "libreria-979b5"
+          }
         }
       }
     }

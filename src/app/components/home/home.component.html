@@ -1,59 +1,33 @@
 <br>
 <br>
-<div class="container mt-4">
-    <div class="row">
-        <div class="col">
-            <h1 class="text-center">Información del libro</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col col-sm-12">
-            <form action="javascript:void(0)" name="frmbook" id="frmbook" class="col s12">
-                <div class="input-group mb-4">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="bi bi-file-earmark-person"></i></div>
-                    </div>
-                    <input type="text" placeholder="Ingrese ID de el Libro" class="form-control" name="txtlibroid" id="txtlibroid" maxlength="10" />
-                </div>
-                <div class="input-group mb-4">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="bi bi-file-earmark-person"></i></div>
-                    </div>
-                    <input type="text" placeholder="Ingrese Título" class="form-control" name="txttitulo" id="titulo" maxlength="90" />
-                </div>
-                <div class="input-group mb-4">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="bi bi-file-earmark-person"></i></div>
-                    </div>
-                    <input type="text" placeholder="Ingrese Nombre del Autor" name="txtnombreautor" class="form-control" id="nombreautor" required maxlength="60" />
-                </div>
-                <div class="input-group mb-4">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="bi bi-book"></i></div>
-                    </div>
-                    <select name="selecategoria" class="form-control" id="categoria" required>
-                        <option value="" disabled selected>Seleccione la Categoría</option>
-                        <option value="mcgraw">Literarios</option>
-                        <option value="pear">Didácticos</option>
-                        <option value="alfa">Científicos</option>
-                        <option value="anaya">Técnicos</option>
-                        <option value="and">Biográficos</option>
-                    </select>
-                </div>
-                <div class="input-group mb-4">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="bi bi-sort-numeric-up"></i></div>
-                    </div>
-                    <input type="text" placeholder="Ingrese el Precio" name="txtprecio" class="form-control" id="precio" required maxlength="60" />
-                </div>
-                <div class="input-group mb-4">
-                    <input onchange="previewImage(event, '#image')" name="file" type="file" id="file">
-                    <br>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <button type="submit" name="mostrar" id="mostrar" class="btn btn-success w-25 col-md-12">Enviar</button>
-                </div>
-            </form>
-        </div>
-    </div>
+<div class="container">
+
+  <div class="row">
+      <hr>
+      <div class="d-flex justify-content-between align-items-center">
+          <h1 class="text-center">Lista de Libros</h1>
+          <button type="button" class="btn btn-outline-success bi bi-plus-circle circulo" [routerLink]="['/bookRegister']"></button>
+      </div>
+      <table class="table table-hover">
+          <thead>
+              <tr>
+                  <th class="img">Imagen</th>
+                  <th>Título</th>
+                  <th>ID de el Libro</th>
+                  <th>Nombre del Autor</th>
+                  <th>Precio de Adquisicion</th>
+                  <th><select name="selecategoria" class="btn btn-secondary btn-lg custom-btn" id="categoria" required>
+                      <option value="" disabled selected>Categoría</option>
+                      <option value="mcgraw">Literarios</option>
+                      <option value="pear">Didácticos</option>
+                      <option value="alfa">Científicos</option>
+                      <option value="anaya">Técnicos</option>
+                      <option value="and">Biográficos</option>
+              </select></th>
+          </tr>
+          </thead>
+          <tbody id="infolibro" >
+          </tbody>
+      </table>
+  </div>
 </div>
