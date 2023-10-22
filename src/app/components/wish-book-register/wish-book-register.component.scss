@@ -1,0 +1,96 @@
+// Definición de colores
+$color-primary: #44749d;
+$color-secondary: #c6d4e1;
+$color-white: #ffffff;
+$color-background: #ebe7e0;
+$color-accent: #bdb8ad;
+
+// Estilos generales
+body {
+    font-family: Arial, sans-serif;
+    background-color: $color-white;
+}
+
+.container {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: $color-background;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: $color-primary;
+    font-size: 28px;
+    margin: 0;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    .input-group-prepend {
+        .input-group-text {
+            background-color: $color-primary;
+            border: none;
+            i {
+                font-size: 20px;
+                color: $color-white;
+            }
+        }
+    }
+    input.form-control {
+        background-color: $color-white;
+        border: 1px solid $color-secondary;
+        color: $color-primary;
+        border-radius: 10px;
+        padding: 10px;
+        &:focus {
+            border-color: $color-primary;
+        }
+    }
+}
+
+select.form-select {
+    background-color: $color-white;
+    border: 1px solid $color-secondary;
+    color: $color-primary;
+    border-radius: 10px;
+    padding: 10px;
+    &:focus {
+        border-color: $color-primary;
+    }
+}
+
+.btn-success {
+    background-color: $color-primary;
+    border: none;
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 8px 12px;
+    i {
+        font-size: 18px;
+        color: $color-white;
+    }
+    &:hover {
+        background-color: darken($color-primary, 10%);
+    }
+}
+
+.d-flex {
+    justify-content: center;
+}
+
+// Estilos para botones circulares
+.bt {
+    border-radius: 100%;
+    background-color: $color-primary;
+    border: none;
+    color: $color-white;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    &:hover {
+        background-color: darken($color-primary, 10%);
+    }
+}

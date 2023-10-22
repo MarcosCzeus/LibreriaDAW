@@ -1,8 +1,21 @@
-.main{
-    background-image: url(/App_libros/src/libros.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    color: #fff;
+// Definición de colores
+$color-background: #355975;
+$color-text: #FFFFFF;
+$color-active: #4d708d;
+
+// Estilos para el fondo del menú
+div {
+    background-color: $color-background;
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+// Estilos para los ítems del menú
+.nav-link {
+    color: $color-text;
+    &.active {
+        background-color: $color-active;
+    }
 }
