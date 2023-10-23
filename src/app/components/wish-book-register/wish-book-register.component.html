@@ -6,30 +6,30 @@
     </div>
     <div class="row">
         <div class="col col-sm-12">
-            <form action="javascript:void(0)" name="frmbook" id="frmbook" class="col s12">
+            <form [formGroup]="forms" name="frmbook" id="frmbook" class="col s12">
                 <div class="input-group mb-4">
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="bi bi-file-earmark-person"></i></div>
                     </div>
-                    <input type="text" placeholder="Ingrese ID de el Libro" class="form-control" name="txtlibroid" id="txtlibroid" maxlength="10" />
+                    <input type="text" placeholder="Ingrese ID de el Libro" class="form-control" name="txtlibroid" id="txtlibroid" maxlength="20" formControlName="id" />
+                </div>
+                <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="bi bi-file-earmark-person" ></i></div>
+                    </div>
+                    <input type="text" placeholder="Ingrese Título" class="form-control" name="txttitulo" id="titulo" maxlength="90" formControlName="titulo"/>
                 </div>
                 <div class="input-group mb-4">
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="bi bi-file-earmark-person"></i></div>
                     </div>
-                    <input type="text" placeholder="Ingrese Título" class="form-control" name="txttitulo" id="titulo" maxlength="90" />
-                </div>
-                <div class="input-group mb-4">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="bi bi-file-earmark-person"></i></div>
-                    </div>
-                    <input type="text" placeholder="Ingrese Nombre del Autor" name="txtnombreautor" class="form-control" id="nombreautor" required maxlength="60" />
+                    <input type="text" placeholder="Ingrese Nombre del Autor" name="txtnombreautor" class="form-control" id="nombreautor" required maxlength="60" formControlName="nombre"/>
                 </div>
                 <div class="input-group mb-4">
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="bi bi-book"></i></div>
                     </div>
-                    <select name="selecategoria" class="form-select" id="categoria" required>
+                    <select name="selecategoria" class="form-control" formControlName="Categoria" id="categoria" required>
                         <option value="" disabled selected>Seleccione la Categoría</option>
                         <option value="mcgraw">Literarios</option>
                         <option value="pear">Didácticos</option>
@@ -42,14 +42,14 @@
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="bi bi-sort-numeric-up"></i></div>
                     </div>
-                    <input type="text" placeholder="Ingrese el Precio" name="txtprecio" class="form-control" id="precio" required maxlength="60" />
+                    <input type="text" step="0.01" inputmode="decimal" placeholder="Ingrese el Precio" name="txtprecio" class="form-control" id="precio" required maxlength="6" required minlength="1" formControlName="Precio"/>
                 </div>
-                <div class="input-group mb-4">
-                    <input onchange="previewImage(event, '#image')" name="file" type="file" id="file"> 
+                <!-- <div class="input-group mb-4">
+                    <input  onchange="previewImage(event, '#image')" name="file" type="file" id="file">
                     <br>
-                </div>
+                </div> -->
                 <div class="d-flex justify-content-center">
-                    <button type="submit" name="mostrar" id="mostrar" class="btn btn-success w-25 col-md-12">Enviar</button>
+                    <button [disabled]="this.forms.invalid" (click)="guardarLibros()" name="mostrar" id="mostrar" class="btn btn-success w-25 col-md-12">Enviar</button>
                 </div>
             </form>
         </div>

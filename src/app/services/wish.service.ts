@@ -4,15 +4,15 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 @Injectable({
   providedIn: 'root'
 })
-export class BookService {
+export class wishService {
 
   constructor(private firebase:AngularFirestore) { }
 
-  saveBook(book:any):Promise<any>{
-    return this.firebase.collection('Libros').add(book);
+  saveBook(wish:any):Promise<any>{
+    return this.firebase.collection('Deseos').add(wish);
   }
 
-  getBooks(){
-    return this.firebase.collection('Libros').snapshotChanges();
+  getWish(){
+    return this.firebase.collection('Deseos').snapshotChanges();
   }
 }

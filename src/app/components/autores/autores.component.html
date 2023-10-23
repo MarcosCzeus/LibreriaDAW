@@ -19,15 +19,20 @@
                 <thead class="thead-dark">
                     <tr>
                         <th>Código de Autor</th>
-                        <th>Fecha de Nacimiento</th>
                         <th>Nombre del Autor</th>
                         <th>Apellido del Autor</th>
                         <th>Nació</th>
                         <th>Murió</th>
                     </tr>
                 </thead>
-                <tbody id="infolibro">
-                    <!-- Aquí se insertarían los datos de los autores -->
+                <tbody id="infolibro" *ngFor="let autor of autor">
+                    <tr>
+                        <td>{{autor.idAutor}}</td>
+                        <td>{{autor.nombre}}</td>
+                        <td>{{autor.apellido}}</td>
+                        <td>{{autor.nacio}}</td>
+                        <td>{{autor.murio}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>

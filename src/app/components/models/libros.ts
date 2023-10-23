@@ -1,5 +1,5 @@
 export class CatalogoLibros{
-    img?: File;
+    // img?: File;
     titulo: string;
     idLibro?: string;
     nombre: string;
@@ -12,4 +12,13 @@ export class CatalogoLibros{
         this.Precio = Precio;
         this.Categoria = Categoria;
     }
+}
+
+
+export interface Libro{
+    id:number,
+    titulo:string,
+    autor:string,
+    categoria:string,
+    precio:number
 }

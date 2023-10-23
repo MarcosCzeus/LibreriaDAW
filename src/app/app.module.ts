@@ -11,7 +11,7 @@ import { AutoresComponent } from './components/autores/autores.component';
 import { AutoresRegisterComponent } from './components/autores-register/autores-register.component';
 import { WishBookComponent } from './components/wish-book/wish-book.component';
 import { WishBookRegisterComponent } from './components/wish-book-register/wish-book-register.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 
 @NgModule({
@@ -29,7 +29,8 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

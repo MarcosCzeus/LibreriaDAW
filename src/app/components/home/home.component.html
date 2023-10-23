@@ -8,25 +8,27 @@
           <h1 class="text-center">Lista de Libros</h1>
           <button type="button" class="btn btn-outline-success bi bi-plus-circle circulo" [routerLink]="['/bookRegister']"></button>
       </div>
-      <table class="table table-hover">
+      <table class="table table-hover" >
           <thead>
-              <tr>
-                  <th class="img">Imagen</th>
-                  <th>Título</th>
-                  <th>ID de el Libro</th>
-                  <th>Nombre del Autor</th>
-                  <th>Precio de Adquisicion</th>
-                  <th><select name="selecategoria" class="btn btn-secondary btn-lg custom-btn" id="categoria" required>
-                      <option value="" disabled selected>Categoría</option>
-                      <option value="mcgraw">Literarios</option>
-                      <option value="pear">Didácticos</option>
-                      <option value="alfa">Científicos</option>
-                      <option value="anaya">Técnicos</option>
-                      <option value="and">Biográficos</option>
-              </select></th>
-          </tr>
+            <tr>
+                <!-- <th class="img">Imagen</th> -->
+                <th>Título</th>
+                <th>ID de el Libro</th>
+                <th>Nombre del Autor</th>
+                <th>Precio de Adquisicion</th>
+                <th>
+                    Categoria    
+                </th>
+            </tr>
           </thead>
-          <tbody id="infolibro" >
+          <tbody id="infolibro" *ngFor="let book of Books">
+            <tr>
+                <td>{{book.titulo}}</td>
+                <td>{{book.id}}</td>
+                <td>{{book.nombre}}</td>
+                <td>{{book.Precio}}</td>
+                <td> {{getCategory(book.Categoria)}}</td>
+            </tr>
           </tbody>
       </table>
   </div>

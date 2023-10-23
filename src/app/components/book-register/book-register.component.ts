@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CatalogoLibros } from '../models/libros';
+import { CatalogoLibros, Libro } from '../models/libros';
 import { BookService } from 'src/app/services/book.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-book-register',
@@ -9,12 +9,14 @@ import { BookService } from 'src/app/services/book.service';
   styleUrls: ['./book-register.component.scss']
 })
 export class BookRegisterComponent implements OnInit {
-
+  libros:Libro[] = []
   forms: FormGroup;
+  
   constructor(private fb: FormBuilder,
     private bookService:BookService
   ) {
     this.forms = this.fb.group({
+      id:['', Validators.required],
       titulo: ['', Validators.required],
       nombre: ['', Validators.required],
       Precio: ['', Validators.required],
@@ -25,8 +27,7 @@ export class BookRegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  listarLibros(){
-    alert("me llama")
+  guardarLibros(){
     console.log(this.forms.getRawValue());
     const Libro = this.forms.getRawValue();
     this.bookService.saveBook(Libro).then(r => {

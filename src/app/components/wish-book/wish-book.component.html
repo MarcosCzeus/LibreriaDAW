@@ -9,25 +9,24 @@
             <table class="table table-striped table-bordered table-hover">
                 <thead class="thead-dark">
                     <tr>
-                        <th class="img">Imagen</th>
-                        <th>ID de el Libro</th>
+                        <!-- <th class="img">Imagen</th> -->
                         <th>Título</th>
+                        <th>ID de el Libro</th>
                         <th>Nombre del Autor</th>
                         <th>Precio de el Libro</th>
                         <th>
-                            <select name="selecategoria" class="form-select custom-select custom-btn" id="categoria" required>
-                                <option value="" disabled selected>Categoría</option>
-                                <option value="mcgraw">Literarios</option>
-                                <option value="pear">Didácticos</option>
-                                <option value="alfa">Científicos</option>
-                                <option value="anaya">Técnicos</option>
-                                <option value="and">Biográficos</option>
-                            </select>
+                            Categoria    
                         </th>
                     </tr>
                 </thead>
-                <tbody id="infolibro">
-                    <!-- Aquí se insertarían los datos de los libros -->
+                <tbody id="infolibro" *ngFor="let book of wish">
+                  <tr>
+                      <td>{{book.titulo}}</td>
+                      <td>{{book.id}}</td>
+                      <td>{{book.nombre}}</td>
+                      <td>{{book.Precio}}</td>
+                      <td> {{getCategory(book.Categoria)}}</td>
+                  </tr>
                 </tbody>
             </table>
         </div>
