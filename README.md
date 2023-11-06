@@ -26,3 +26,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 "# LibreriaDAW" 
+
+Links del contenido realizado
+
+[Manual de Usuario](https://www.canva.com/design/DAFzRnc-3Pg/Dz-YlUuZmhlvqLOhu8d-cA/edit?utm_content=DAFzRnc-3Pg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+[visra en portatil](https://www.figma.com/file/UW6psUm078EvppTGuDRHNW/Untitled?type=design&node-id=3-81&mode=design&t=vMKU4oQsTTIiQIpQ-0)
+
+[Vista de movil](https://www.figma.com/file/xtMAKP6URJ7yzKz1z0ZHHO/Untitled?type=design&node-id=20-279&mode=design)
+
+[Trello](https://trello.com/b/e9AZe1eg/proyecto-de-catedra-daw-l)
+
