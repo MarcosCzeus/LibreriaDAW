@@ -37,3 +37,6 @@ Links del contenido realizado
 
 [Trello](https://trello.com/b/e9AZe1eg/proyecto-de-catedra-daw-l)
 
+[Licencias Creative Commons]
+[Firebase](https://firebase.google.com/?gad_source=1&gclid=Cj0KCQjw-pyqBhDmARIsAKd9XIPVPW1iM-e7QGuX15E27vaAICDeMhw2puM-JcSNe1GAsUzLnrNcDqYaAkFjEALw_wcB&gclsrc=aw.ds&hl=es-419)
+[Boostrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
