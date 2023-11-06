@@ -1,0 +1,35 @@
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Bienvenidos a LibrosShop</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4 fw-bold">Esta es una pagina gratuita para quienes desean crear listas de deseos, crear un catalogo personal y hasta registrar a tus autores favoritos</p>
+      <div class="col-md-10 mx-auto col-lg-5">
+        <form class="p-4 p-md-5 border rounded-3 bg-light" #myForm [formGroup]="formLogin">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-primary btn-lg px-4 gap-3" (click)="logIn()">Login</button>
+            <button type="button" class="btn btn-primary btn-lg px-4 gap-3"  [routerLink]="['/register']">Registrarse</button>
+          </div>
+          <hr class="my-4">
+          <small class="text-muted">!!!Gracias por hacer uso de nuestra pagina¡¡¡</small>
+        </form>
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3" (click)="onClick()">Login With Google</button>
+      </div>
+    </div>
+    <div>
+        <footer>
+            <h3>Redes sociales:</h3>
+        </footer>
+    </div>
+  </div>

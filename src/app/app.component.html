@@ -9,6 +9,12 @@
       <li class="nav-item">
           <a class="nav-link btn btn-outline-light" [routerLink]="['/wishbook']">Lista de Deseos</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link btn btn-outline-light" [routerLink]="['/login']">Log-In</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link btn btn-outline-light" (click)="logOut()">Log-Out</a>
+  </li>
   </ul>
   <router-outlet></router-outlet>
 </div>

@@ -1,0 +1,32 @@
+   <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+      <div class="col-lg-7 text-center text-lg-start">
+        <h1 class="display-4 fw-bold lh-1 mb-3">Registrate para poder hacer uso de nuestros servicios</h1>
+      <p class="col-lg-10 fs-4 fw-bold">Esta es una pagina creada para que nuestros lectores puedan guardar los libros que les gustan asi tambien como crear una lista de libros deseados.</p>
+      </div>
+      <div class="col-md-10 mx-auto col-lg-5">
+        <form class="p-4 p-md-5 border rounded-3 bg-light" #myForm (ngSubmit)="onSubmit()" [formGroup]="formReg">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="name" formControlName="name">
+            <label for="floatingInput">Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Registrarse</button>
+          <hr class="my-4">
+          <small class="text-muted">!!!Gracias por hacer uso de nuestra pagina¡¡¡</small>
+        </form>
+      </div>
+    </div>
+  </div>

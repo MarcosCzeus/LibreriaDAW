@@ -6,30 +6,41 @@ import { AutoresComponent } from './components/autores/autores.component';
 import { AutoresRegisterComponent } from './components/autores-register/autores-register.component';
 import { WishBookComponent } from './components/wish-book/wish-book.component';
 import { WishBookRegisterComponent } from './components/wish-book-register/wish-book-register.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import{ canActivate, redirectUnauthorizedTo} from '@angular/fire/auth-guard';
 
 const routes: Routes = [
   {
-    path: 'home', component: HomeComponent, 
+    path: 'login', component: LoginComponent, 
     resolve: {}
   },
   {
-    path: 'bookRegister', component: BookRegisterComponent, 
+    path: 'bookRegister', component: BookRegisterComponent, ...canActivate (()=> redirectUnauthorizedTo(['/login'])),
     resolve: {}
   },
   {
-    path: 'wishbook', component: WishBookComponent, 
+    path: 'wishbook', component: WishBookComponent, ...canActivate (()=> redirectUnauthorizedTo(['/login'])),
     resolve: {}
   },
   {
-    path: 'wishbookregister', component: WishBookRegisterComponent, 
+    path: 'wishbookregister', component: WishBookRegisterComponent, ...canActivate (()=> redirectUnauthorizedTo(['/login'])),
     resolve: {}
   },
   {
-    path: 'autores', component: AutoresComponent, 
+    path: 'autores', component: AutoresComponent, ...canActivate (()=> redirectUnauthorizedTo(['/login'])),
     resolve: {}
   },
   {
-    path: 'autoresRegister', component: AutoresRegisterComponent, 
+    path: 'autoresRegister', component: AutoresRegisterComponent, ...canActivate (()=> redirectUnauthorizedTo(['/login'])),
+    resolve: {}
+  },
+  {
+    path: 'home', component: HomeComponent, ...canActivate (()=> redirectUnauthorizedTo(['/login'])),
+    resolve: {}
+  },
+  {
+    path: 'register', component: RegisterComponent, 
     resolve: {}
   },
   {path: '**', redirectTo: 'home', pathMatch: 'full'}

@@ -12,7 +12,11 @@ import { AutoresRegisterComponent } from './components/autores-register/autores-
 import { WishBookComponent } from './components/wish-book/wish-book.component';
 import { WishBookRegisterComponent } from './components/wish-book-register/wish-book-register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { environment } from 'src/environments/environment';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { environment } from 'src/environments/environment';
     AutoresComponent,
     AutoresRegisterComponent,
     WishBookComponent,
-    WishBookRegisterComponent
+    WishBookRegisterComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,9 @@ import { environment } from 'src/environments/environment';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
   ],
   providers: [],
   bootstrap: [AppComponent]
